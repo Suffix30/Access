@@ -1,0 +1,109 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 8;
+    background-color: #000;
+}
+
+.interactive-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.interactive-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+.hotspot {
+    position: absolute;
+    width: 1.6875%;
+    height: 1.625%;
+    background-color: rgba(0, 195, 255, 0);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.hotspot:hover {
+    background-color: #00ffff75;
+    box-shadow: 0 0 20px #00ffff, 0 0 20px #00ffff;
+}
+
+@keyframes neon-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px #32dbdbeb, 0 0 20px #00ffffcc, 0 0 20px #00ffffa4;
+    }
+    50% {
+        box-shadow: 0 0 0px #32dbdbeb, 0 0 0px #00ffff, 0 0 20px #00ffff98;
+    }
+}
+
+.hotspot.selected {
+    animation: neon-glow 1.0s infinite alternate;
+    background-color: rgba(18, 204, 207, 0.363);
+}
+
+.md5-box {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 150%;
+    text-align: center;
+    color: #00FF00;
+}
+
+.input-area {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.input-area input {
+    padding: 2%;
+    font-size: 150%;
+    border: 0.5%;
+    background-color: #05fd0d1b;
+    color: #00FF00;
+    border-radius: 1.5%;
+}
+
+.input-area button {
+    padding: 2% 5%;
+    font-size: 150%;
+    border: 0.5%;
+    background-color: #05fd0d1b;
+    color: #00FF00;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: background-color 1.0s;
+}
+
+.input-area button:hover {
+    background-color: #00FF00;
+    color: #000;
+}

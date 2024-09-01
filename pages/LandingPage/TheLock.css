@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.lock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(20vh);
+}
+
+#digi-skull {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    transform: scale(1.5);
+}
+
+.combination-lock {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.combination-lock input {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    background-color: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    animation: border-pulse 3s infinite;
+}
+
+@keyframes border-pulse {
+    0% {
+        box-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #9000ff;
+    }
+    50% {
+        box-shadow: 0 0 10px #9000ff, 0 0 15px #9000ff, 0 0 20px #9000ff, 0 0 25px #00FF00;
+    }
+    100% {
+        box-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #9000ff;
+    }
+}
+
+button.f12-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #9000ff;
+    border: 2px solid #00FF00;
+    cursor: pointer;
+    animation: border-pulse 3s infinite;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.f12-button:hover {
+    background-color: #06ff029c;
+    color: #9000ff;
+}
+
+
