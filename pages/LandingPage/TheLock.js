@@ -12,4 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Incorrect combination, try again.');
         }
     });
+
+    document.querySelector('.f12-button').addEventListener('click', function () {
+        alert('F12 button clicked!');
+    });
 });
