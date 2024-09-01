@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('unlock-btn').addEventListener('click', function () {
+    console.log("DOM fully loaded and parsed");
+
+    const unlockBtn = document.getElementById('unlock-btn');
+    console.log(unlockBtn);
+
+    unlockBtn.addEventListener('click', function () {
         const digit1 = document.getElementById('digit1').value;
         const digit2 = document.getElementById('digit2').value;
         const digit3 = document.getElementById('digit3').value;
@@ -11,9 +16,5 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Incorrect combination, try again.');
         }
-    });
-
-    document.querySelector('.f12-button').addEventListener('click', function () {
-        alert('F12 button clicked!');
     });
 });
